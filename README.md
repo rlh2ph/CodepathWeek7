@@ -33,7 +33,7 @@ Time spent: **X** hours spent in total
     - Must be an admin and have Burp installed
     - Upload new media
     - Intercept the upload
-    - Change file name to 'cengizhansahinsumofpwn<img src=a onerror=alert(document.cookie)>.jpg'
+    - Change file name to `cengizhansahinsumofpwn<img src=a onerror=alert(document.cookie)>.jpg`
     - Access link below to view cookie alert
   - [ ] Affected source code:
     - [Link 1](http://wpdistillery.vm/cengizhansahinsumofpwn/)
