@@ -10,14 +10,14 @@ Time spent: **X** hours spent in total
 ## Pentesting Report
 
 1. (Required) Vulnerability Name or ID: WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: In WordPress, an author or contributor level user can create an alert by entering HTML code surrounded by code tags when editing or creating a post.
+  - [ ] Summary: In WordPress, an author or contributor level user can create an alert by entering HTML code surrounded by `<code>` tags when editing or creating a post.
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
       - Attacker must have either a contributor or author account
-      - Create a post with <code><a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a></code> surrounded in code HTML tags
+      - Create a post with `<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>` surrounded in code HTML tags
       - Hover the mouse over the link to see the alert pop up
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
