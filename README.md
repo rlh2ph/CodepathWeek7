@@ -22,24 +22,37 @@ Time spent: **X** hours spent in total
       - Hover the mouse over the link to see the alert pop up
   - [ ] Affected source code:
     - [Link 1](http://wpdistillery.vm/?p=6&preview=true)
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+1. (Required) Vulnerability Name or ID: WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
+  - [ ] Summary: Admin inserts adds new media object and intercepts it with burb. Adds script to the media file name to create an alert of the admin's cookie when the media is accessed.
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.10
   - [ ] GIF Walkthrough: 
+    - ![Alt Text](https://github.com/rlh2ph/CodepathWeek7/blob/master/ImageXSSGif.gif)
   - [ ] Steps to recreate: 
+    - Must be an admin and have Burp installed
+    - Upload new media
+    - Intercept the upload
+    - Change file name to `cengizhansahinsumofpwn<img src=a onerror=alert(document.cookie)>.jpg`
+    - Access link below to view cookie alert
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - [Link 1](http://wpdistillery.vm/cengizhansahinsumofpwn/)
+1. (Required) Vulnerability Name or ID: WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS)
+  - [ ] Summary: This XSS attack creates an alert that says "hello world" and then disbles the admin's access of the site. Nothing can be clicked or interacted with.
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: 
+    - ![Alt Text](https://github.com/rlh2ph/CodepathWeek7/blob/master/AlertXSSGif.gif)
   - [ ] Steps to recreate: 
+    - As a user, create a comment
+    - In the body of the comment, paste the following code: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>`
+    - Replace the `AAAAAAAAAAAA...[64 kb]..AAA` with 64 kb of As. Enough until the browser begins to lag.
+    - Post the comment
+    - Login as an admin, approve the comment, and visit the post that the comment was on
+    - An alert should pop up that reads: "hello world" and functionality on the page should be disabled
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](http://wpdistillery.vm/hello-world/)
  
 
 ## Assets
