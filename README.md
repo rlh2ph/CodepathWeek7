@@ -17,10 +17,10 @@ Time spent: **X** hours spent in total
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
       - Attacker must have either a contributor or author account
-      - Create a post with `<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>` surrounded in code HTML tags
+      - Create a post with `<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>` surrounded in `<code>` tags
       - Hover the mouse over the link to see the alert pop up
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](http://wpdistillery.vm/?p=6&preview=true)
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
