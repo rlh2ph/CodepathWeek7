@@ -10,7 +10,7 @@ Time spent: **X** hours spent in total
 ## Pentesting Report
 
 1. (Required) Vulnerability Name or ID: WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: In WordPress, an author or contributor level user can create an alert by entering HTML code surrounded by <code> tags when editing or createing a post.
+  - [ ] Summary: In WordPress, an author or contributor level user can create an alert by entering HTML code surrounded by <code><code></code> tags when editing or createing a post.
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.3
