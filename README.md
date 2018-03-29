@@ -1,11 +1,8 @@
-# CodepathWeek7
-Assignment for Week 7 of the Codepath Cybersecurity Course
-
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **2.5** hours spent in total
 
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+> Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
@@ -22,7 +19,7 @@ Time spent: **X** hours spent in total
       - Hover the mouse over the link to see the alert pop up
   - [ ] Affected source code:
     - [Link 1](http://wpdistillery.vm/?p=6&preview=true)
-1. (Required) Vulnerability Name or ID: WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
+2. (Required) Vulnerability Name or ID: WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
   - [ ] Summary: Admin inserts adds new media object and intercepts it with burb. Adds script to the media file name to create an alert of the admin's cookie when the media is accessed.
     - Vulnerability types: XSS
     - Tested in version: 4.2
@@ -36,8 +33,8 @@ Time spent: **X** hours spent in total
     - Change file name to `cengizhansahinsumofpwn<img src=a onerror=alert(document.cookie)>.jpg`
     - Access link below to view cookie alert
   - [ ] Affected source code:
-    - [Link 1](http://wpdistillery.vm/cengizhansahinsumofpwn/)
-1. (Required) Vulnerability Name or ID: WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS)
+    - [Link 2](http://wpdistillery.vm/cengizhansahinsumofpwn/)
+3. (Required) Vulnerability Name or ID: WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: This XSS attack creates an alert that says "hello world" and then disbles the admin's access of the site. Nothing can be clicked or interacted with.
     - Vulnerability types: XSS
     - Tested in version: 4.2
@@ -52,12 +49,14 @@ Time spent: **X** hours spent in total
     - Login as an admin, approve the comment, and visit the post that the comment was on
     - An alert should pop up that reads: "hello world" and functionality on the page should be disabled
   - [ ] Affected source code:
-    - [Link 1](http://wpdistillery.vm/hello-world/)
+    - [Link 3](http://wpdistillery.vm/hello-world/)
  
 
 ## Assets
 
 List any additional assets, such as scripts or files
+
+N/A
 
 ## Resources
 
@@ -68,7 +67,9 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+Describe any challenges encountered while doing the work:
+
+The only challenges during this assignment were figuring out which vulnerabilities to test based on my knowledge of cybersecurity at this point. There were other challenges that seemed intersting to test, such as DOS attacks, but I do not have enough knowledge to perform such an attack.
 
 ## License
 
