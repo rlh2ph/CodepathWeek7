@@ -15,6 +15,7 @@ Time spent: **X** hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: 
+    - ![Alt Text](https://github.com/rlh2ph/CodepathWeek7/blob/master/AuthenticateXSSGif.gif)
   - [ ] Steps to recreate: 
       - Attacker must have either a contributor or author account
       - Create a post with `<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>` surrounded in `<code>` tags
